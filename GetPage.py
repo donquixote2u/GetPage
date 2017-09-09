@@ -17,7 +17,7 @@ class Browser(QWebView):
     def _result_available(self, ok):
        frame = self.page().mainFrame()
        # python<3 # self.html=unicode(frame.toHtml()).encode('utf-8')
-       print(self.html=frame.toHtml())
+       print(frame.toHtml())
        sys.exit()
 
 
@@ -25,7 +25,8 @@ if __name__ == '__main__':
 	display = Display(visible=0, size=(800, 600))
 	display.start()
 	app = QApplication(sys.argv)
-	if(url=app.arguments([1])):
+	url=app.arguments()[1]
+	if(url):	## get url from passed args
 		view = Browser()
 		view.load(QUrl(url))
 		app.exec_()
