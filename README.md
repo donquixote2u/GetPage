@@ -1,15 +1,12 @@
 # GetPage
-python page render into html
+Uses Python to render any given webpage (which may be generated to any extent with javascript), into its final html form (e.g. for webscraping) using qtwebengine
 
-this uses the qt 5 webkit to render pages that may have a large degree of javascript rendering of content.
+Prerequisites;  Pyvirtualdisplay (for running in batch mode), PyQt5, PyQt5.WebEngine  (separate module in Debian and Ubuntu)
+Ubuntu may also require xvfb installed.
 
-developed in a Debian environment where prerequisites were :
-PyQt5
-PyQt5-WebKit
+example: python3 GetPage2.py "http://www.mypage.php" > mypage.html
 
-todo;
-investigate webengine-based equivalent
-The Chromium browser now uses webengine as its core;
-webkit has been forked as a parallel development, but support is uncertain.
+GetPageWk is an earlier webkit version of GetPage;  webengine replaced webkit in Chrome, 
+but webkit survives as a fork.
 
 
