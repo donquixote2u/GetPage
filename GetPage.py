@@ -9,7 +9,7 @@ from PyQt5.QtWebEngineWidgets import QWebEngineView
 class Render(QWebEngineView):
         def __init__(self):
                 self.batch=False
-                self.app = QApplication([])
+                self.app = QApplication(sys.argv)
                 self.html = None
                 QWebEngineView.__init__(self)
                 self.loadFinished.connect(self._loadFinished)
@@ -33,13 +33,13 @@ if __name__ == '__main__':
         from pyvirtualdisplay import Display
         display = Display(visible=0, size=(800, 600))
         display.start()
-        app = QApplication(sys.argv)
-        url=app.arguments()[1]
-        if(url):	## get url from passed args
-                view = Render()
-                view.batch=True
-                view.load(QUrl(url))
-                view.app.exec_()    
+        #app = QApplication(sys.argv)
+        #url=app.arguments()[1]
+        #if(url):	## get url from passed args
+        view = Render()
+        view.batch=True
+        view.load(QUrl(view.app.arguments()[1]))
+        view.app.exec_()    
 
 
             
