@@ -39,7 +39,9 @@ if __name__ == '__main__':
         view = Render()
         view.batch=True
         view.load(QUrl(view.app.arguments()[1]))
-        view.app.exec_()    
+        view.app.exec_()
+        display.stop()
+         
 
 
             
