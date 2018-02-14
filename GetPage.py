@@ -1,7 +1,9 @@
 ## webkit scraper vsn 4 24/9/17  - works in cli mode, redirect output to file
 ## example: python3 GetPage.py "http://www.mypage.php" > mypage.html
-## if using python2 uncomment print with encoding 
+## if using python2 uncomment print with encoding  (11/2/18 utf-8 encoding explicit)
+# -*- coding: utf-8 -*-
 import sys
+import codecs
 from PyQt5.QtCore import QUrl
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWebEngineWidgets import QWebEngineView
@@ -22,7 +24,8 @@ class Render(QWebEngineView):
             # this is only called on html output completion    
             self.html = data
             if(self.batch): ## if not batch, html is returned to caller
-              print(self.html)  ## uncomment line below if python2 
+              print(self.html.encode("utf-8","ignore")) # 11/2/18 utf-8 coding explicit
+              # uncomment line below if python2 
               # print(unicode(self.html).encode('utf-8'))  
               sys.exit()
             else: 
