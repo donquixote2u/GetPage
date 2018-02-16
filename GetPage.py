@@ -1,6 +1,7 @@
 ## webkit scraper vsn 4 24/9/17  - works in cli mode, redirect output to file
 ## example: python3 GetPage.py "http://www.mypage.php" > mypage.html
 ## if using python2 uncomment print with encoding  (11/2/18 utf-8 encoding explicit)
+##  ( 17/2/18 app.exit correctly implemented to allow display.stop to kill xvfb instance )
 # -*- coding: utf-8 -*-
 import sys
 import codecs

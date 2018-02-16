@@ -1,6 +1,5 @@
 # GetPage
 Uses Python to render any given webpage (which may be generated to any extent with javascript), into its final html form (e.g. for webscraping) using qtwebengine
-(** 17/2/18 app.exit correctly implemented to allow display.stop to kill xvfb instance)
 
 python prerequisites;  
 pyvirtualdisplay (for running in batch mode) 
