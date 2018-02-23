@@ -40,15 +40,3 @@ if __name__ == '__main__':
           view.load(QUrl(view.app.arguments()[1])) ## get url from passed args
           view.app.exec_()
           display.stop()
-        
-         
-
-
-            
-
-
-
-
-
-
-
