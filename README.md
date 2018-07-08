@@ -13,14 +13,18 @@ FlaskRender is a flask framework for GetPage for use as a web service
 GetPageWk is an earlier webkit version of GetPage;  webengine replaced webkit in Chrome, 
 but webkit survives as a fork.
 
-GETHTML.php is an example of using GetPage in php.
+GETHTML.php is an example of using GetPage in php. just call webpage with url as argument e.g.
+http://localhost/GetHTML.php?url=someurl.com
+
+GetPage.sh is an example of a cgi shell script calling python  (put in your webserver cgi folder)
 
 EXAMPLE USAGE: 
 batch mode; python3 GetPage.py "http://www.mypage.php" > mypage.html
 
-web service; 
+flask web service; 
 start web service: python3 FlaskRender.py  
 send request url to web service with Render argument + url: http://localhost:5000/Render?url=http://mywebpage.com
+
 
 
 

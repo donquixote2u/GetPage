@@ -3,7 +3,8 @@
 function geturl($url)
 {
 $base=$_SERVER['DOCUMENT_ROOT'];
-$cmd='sudo  '.$base.'cgi-bin/GetPage.sh '.$url;
+// $cmd='sudo  '.$base.'python/GetPage/GetPage.sh '.$url; 
+$cmd='sudo  /usr/bin/python '.$base.'python/GetPage/GetPage.py '.$url; 
 //DEBUG error_log("cmd=".$cmd,3,"/tmp/err.txt");
 ob_start();
 passthru($cmd);
