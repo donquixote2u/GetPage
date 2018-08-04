@@ -25,7 +25,8 @@ class Render(QWebEngineView):
             # this is only called on html output completion    
             self.html = data
             if(self.batch): ## if not batch, html is returned to caller
-              print(self.html.encode("utf-8","ignore")) # 11/2/18 utf-8 coding explicit
+              # print(self.html.encode("utf-8","ignore")) # 11/2/18 utf-8 coding explicit
+              print(self.html.encode("utf-8","ignore").decode("ascii","ignore")) # 11/2/18 utf-8 coding explicit
               # uncomment line below if python2 
               # print(unicode(self.html).encode('utf-8'))  
             self.app.quit()
