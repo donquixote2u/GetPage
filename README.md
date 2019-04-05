@@ -15,6 +15,7 @@ but webkit survives as a fork.
 
 GETHTML.php is an example of using GetPage in php. just call webpage with url as argument e.g.
 http://localhost/GetHTML.php?url=someurl.com
+note that you will need to change the php  according to wich version of python you want to call
 
 GetPage.sh is an example of a cgi shell script calling python  (put in your webserver cgi folder)
 
